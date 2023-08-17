@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  backend_app:
+    container_name: backend_app
+    env_file:
+      - ./backend/.env
+    build:
+      dockerfile: Dockerfile
+      context: backend
+    networks:
+      - mongo_database
+    depends_on:
+      - mongo_database
+    ports:
+      - "3000:3010"
+
+  mongo_database:
+    image: mongo:latest
+    container_name: mongo_database
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    ports:
+      - "27017:27017"
+    networks:
+      - mongo_database
+
+networks:
+  mongo_database: { }
