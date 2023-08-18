@@ -1,0 +1,38 @@
+.main {
+  &__layout {
+    padding-top: 220px;
+    padding-bottom: 50px;
+    height: 100%;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__navigator {
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+  }
+
+  &__issue-searcher {
+    margin-top: 20px;
+  }
+
+}
+
+.default__drawer {
+  .ant-drawer-content-wrapper {
+    width: 50% !important;
+    @media (max-width: 800px) {
+      width: 400px !important;
+    }
+  }
+}

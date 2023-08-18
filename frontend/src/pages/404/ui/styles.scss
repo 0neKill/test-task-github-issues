@@ -1,0 +1,14 @@
+.error {
+  $error: &;
+
+  &__container {
+
+    #{$error}-title, .error-subtitle {
+      color: var(--gray-extra-light);
+    }
+
+    #{$error}__btn {
+      width: 100%;
+    }
+  }
+}

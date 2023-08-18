@@ -1,0 +1,14 @@
+.status {
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--blue-dark-active);
+  border-radius: 100%;
+
+  &.open {
+    background-color: var(--green-dark);
+  }
+
+  &.closed {
+    background-color: var(--purple-dark);
+  }
+}

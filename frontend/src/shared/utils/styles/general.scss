@@ -1,0 +1,23 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+  --font-black: 900;
+  --font-bold: 700;
+  --font-regular: 400;
+  --gray-thin: #F2F2F2; //100
+  --gray-extra-light: #D9D9D9; //200
+  --gray-light: #808080; //300
+  --gray-regular: #333333; //400
+  --gray-medium: #262626; //500
+  --gray-semi-bold: #1A1A1A; //600
+  --gray-bold: #0D0D0D; //700
+  --purple: #8284FA;
+  --purple-dark: #5E60CE;
+  --green-dark: #407330;
+  --blue: #4EA8DE;
+  --blue-dark: #1E6F9F;
+  --blue-dark-hover: hsl(203, 71%, 26%);
+  --blue-dark-active: hsl(202, 75%, 20%);
+  --blue-dark-disabled: hsl(204, 35%, 58%);
+  --box-shadow-border: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+

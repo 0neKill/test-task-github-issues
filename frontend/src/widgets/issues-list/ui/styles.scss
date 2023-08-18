@@ -1,0 +1,20 @@
+.issues-list {
+  &__pagination {
+
+
+    .ant-pagination-item {
+      &-link {
+        color: var(--gray-light) !important;
+      }
+
+      a {
+        color: var(--gray-extra-light) !important;
+
+      }
+
+      &-active {
+        background-color: var(--gray-regular);
+      }
+    }
+  }
+}

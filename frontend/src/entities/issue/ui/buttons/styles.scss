@@ -1,0 +1,15 @@
+.issue__btn {
+
+  &--text {
+    border-left: 1px solid var(--gray-light);
+    color: var(--gray-extra-light);
+
+    &:hover {
+      color: var(--gray-light) !important;
+    }
+
+    &:disabled {
+      color: var(--gray-regular) !important;
+    }
+  }
+}
