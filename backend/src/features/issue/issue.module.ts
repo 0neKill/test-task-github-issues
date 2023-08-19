@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { ModuleClass } from '../../__types__';
 
+import { ModuleClass } from '../../__types__';
 import { IssueRoutes } from './routes';
 import { IssueControllers } from './controllers';
 import { IssueRepositories } from './repositories';

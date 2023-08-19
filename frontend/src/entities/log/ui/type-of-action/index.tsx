@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import type { TypeOfActions } from '@/entities/log';
 import { clsx } from 'clsx';
+import type { FC } from 'react';
 
+import type { TypeOfActions } from '@/entities/log';
 
 import './styles.scss';
 

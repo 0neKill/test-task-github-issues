@@ -1,2 +1,2 @@
-export * from './use-dispatch-issue.ts';
-export * from './use-get-view-issue.ts';
+export * from './use-dispatch-issue';
+export * from './use-get-view-issue';

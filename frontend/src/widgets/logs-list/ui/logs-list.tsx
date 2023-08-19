@@ -1,12 +1,11 @@
 import type { FC } from 'react';
 import { clsx } from 'clsx';
+import { Spin } from 'antd';
+
+import { type Log, LogItem, useGetViewIssue } from '@/entities/log';
 import { List } from '@/shared/ui';
 
-
 import './styles.scss';
-
-import { Log, LogItem, useGetViewIssue } from '@/entities/log';
-import { Spin } from 'antd';
 
 type LogsListProps = FC<{
    className?: string,

@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { clsx } from 'clsx';
-import { Issue, IssueCard } from '@/entities/issue';
+
+import { type Issue, IssueCard } from '@/entities/issue';
 
 
 type IssueReaderProps = FC<{

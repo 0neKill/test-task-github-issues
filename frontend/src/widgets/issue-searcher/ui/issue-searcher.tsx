@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import { clsx } from 'clsx';
+
 import { SearchIssues, EntryIssues } from '@/feature';
 
 type IssueSearcherTypes = FC<{

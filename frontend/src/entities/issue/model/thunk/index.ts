@@ -1,4 +1,4 @@
-import { asyncIssueFetch, asyncIssieViewFetch } from './main.ts';
+import { asyncIssueFetch, asyncIssieViewFetch } from './main';
 
 export const action = {
    asyncIssueFetch,

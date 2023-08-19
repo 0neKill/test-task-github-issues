@@ -2,7 +2,6 @@ import { User } from './User';
 
 import type { CommentTypeFromReq } from '../__types__';
 
-
 export class Comment {
    readonly body: string;
    readonly createdAt: string;

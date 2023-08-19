@@ -1,4 +1,4 @@
-import { InitialState } from '@/entities/issue';
+import type { InitialState } from '@/entities/issue';
 
 export const getSelectIssues = ({ reduceIssue }: { reduceIssue: InitialState }) => reduceIssue.issues;
 export const getSelectLoading = ({ reduceIssue }: { reduceIssue: InitialState }) => reduceIssue.loading;

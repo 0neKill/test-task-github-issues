@@ -1,4 +1,5 @@
 import { LogEntity } from '../entity';
+
 import type { CreateTypesRepositories, FindAllTypesRepositories } from '../__types__';
 
 export class LoggerRepositories {

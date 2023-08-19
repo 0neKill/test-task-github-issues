@@ -1,4 +1,5 @@
 import type { NextFunction } from 'express';
+
 import type { RequestType, ResponseType } from '../../../__types__';
 import type { IssueService } from '../services';
 import type { IssueReqDTO, IssuesManyReqDTO } from '../dto';

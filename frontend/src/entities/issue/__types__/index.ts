@@ -1,2 +1,2 @@
-export * from './issue.ts';
-export * from './response.ts';
+export * from './issue';
+export * from './response';

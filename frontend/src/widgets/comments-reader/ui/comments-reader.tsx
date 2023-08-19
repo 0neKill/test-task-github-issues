@@ -1,9 +1,8 @@
 import type { FC } from 'react';
 import { clsx } from 'clsx';
-import { CommentCard } from '@/entities/issue';
 import { Card } from 'antd';
-import { Comment } from '@/entities/issue';
 
+import { CommentCard, type Comment } from '@/entities/issue';
 
 import './styles.scss';
 

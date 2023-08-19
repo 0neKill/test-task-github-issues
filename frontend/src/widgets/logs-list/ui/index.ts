@@ -1,1 +1,1 @@
-export * from './logs-list.tsx';
+export * from './logs-list';

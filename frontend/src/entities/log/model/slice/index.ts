@@ -1,8 +1,7 @@
-import { createSlice, Draft, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit';
-import { Log } from '@/entities/log';
-import { asyncLogFetch } from '@/entities/log/model/thunk/main.ts';
+import { createSlice, type  Draft, type PayloadAction, type SliceCaseReducers } from '@reduxjs/toolkit';
+import { asyncLogFetch } from '@/entities/log/model/thunk/main';
 
-
+import type { Log } from '@/entities/log';
 
 export type InitialState = {
    loading: boolean,

@@ -1,8 +1,9 @@
 import type { FC } from 'react';
 import { clsx } from 'clsx';
+
 import { List } from '@/shared/ui';
-import { Issue, IssueItem, useGetIssue } from '@/entities/issue';
 import { OpenIssue } from '@/feature';
+import { type Issue, IssueItem, useGetIssue } from '@/entities/issue';
 
 
 import './styles.scss';
@@ -13,7 +14,7 @@ type IssuesListTypes = FC<{
 }>
 
 export const IssuesList: IssuesListTypes = ({ className }) => {
-   const { issues, performance, loading, totalCount } = useGetIssue();
+   const { issues, performance, loading, totalCount, page } = useGetIssue();
 
    return (
       <div className={clsx('issues-list', className)}>
@@ -28,7 +29,8 @@ export const IssuesList: IssuesListTypes = ({ className }) => {
                   performance(page);
                },
                pageSize: 30,
-               totalBoundaryShowSizeChanger:totalCount,
+               current: page,
+               totalBoundaryShowSizeChanger: totalCount,
                total: totalCount,
                className: 'issues-list__pagination',
             })}

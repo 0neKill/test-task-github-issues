@@ -1,10 +1,12 @@
 import { Avatar, Card } from 'antd';
 import ReactMarkdown from 'react-markdown';
-import { FC } from 'react';
-import { Issue } from '@/entities/issue';
+import type { FC } from 'react';
+
+import { Status } from '@/shared/ui';
+
+import type { Issue } from '@/entities/issue';
 
 import '../styles.scss';
-import { Status } from '@/shared/ui';
 
 type IssueCardProps = FC<{
    issue: Issue

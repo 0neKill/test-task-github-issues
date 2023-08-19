@@ -1,4 +1,4 @@
-import { asyncLogFetch } from './main.ts';
+import { asyncLogFetch } from './main';
 
 export const action = {
    asyncLogFetch,

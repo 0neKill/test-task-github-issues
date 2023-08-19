@@ -1,12 +1,12 @@
-import { AsyncIssieViewFetchProps, useDispatchActionIssue } from '@/entities/issue';
-import { useSelector } from 'react-redux';
-import {
-   getCommentView,
-   getIssueView, getSearchData, getSelectActiveError, getSelectActiveLoading,
-} from '@/entities/issue/model/selectors';
 import { MutableRefObject, useCallback, useEffect, useMemo, useRef } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+import { AsyncIssieViewFetchProps, useDispatchActionIssue } from '@/entities/issue';
 import { useNotification } from '@/shared/libs';
+import {
+   getCommentView, getIssueView, getSearchData, getSelectActiveError, getSelectActiveLoading,
+} from '@/entities/issue/model/selectors';
 
 export const useGetViewIssue = () => {
    const { asyncIssieViewFetch, setErrorActive } = useDispatchActionIssue();

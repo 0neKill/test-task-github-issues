@@ -1,7 +1,8 @@
 import { Suspense, lazy, type FC } from 'react';
 import { createBrowserRouter, RouterProvider, RouteObject } from 'react-router-dom';
 import { Spin } from 'antd';
-import { Routes } from '@/shared/utils/constants/routes.ts';
+
+import { Routes } from '@/shared/utils/constants';
 
 const Main = lazy(() => import('../../pages/main/ui/main'));
 const Status = lazy(() => import('../../pages/status/ui/status'));

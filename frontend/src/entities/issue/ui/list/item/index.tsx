@@ -1,9 +1,11 @@
 import { Avatar, List } from 'antd';
-import { FC, ReactElement } from 'react';
-import { Issue } from '@/entities/issue';
+import type { FC, ReactElement } from 'react';
+
+import { Status } from '@/shared/ui';
+
+import type { Issue } from '@/entities/issue';
 
 import '../styles.scss';
-import { Status } from '@/shared/ui';
 
 type IssueItemProps = FC<{
    issue: Issue

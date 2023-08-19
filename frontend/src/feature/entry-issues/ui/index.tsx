@@ -1,4 +1,5 @@
 import { ChangeEvent, FC, ReactElement } from 'react';
+
 import { Input } from '@/shared/ui';
 import { useChangeIssue } from '@/entities/issue';
 
@@ -12,7 +13,7 @@ export const EntryIssues: EntryIssuesProps = ({ renderItem }) => {
    const { searchData, setSearchData } = useChangeIssue();
 
    const checkCorrectValue = (value: Record<Type, string>) => {
-      return !!(value['userName'] && value['repoName'])
+      return !!(value['userName'] && value['repoName']);
    };
 
    const handlerOnChange = (type: Type) => (event: ChangeEvent<HTMLInputElement>) => {

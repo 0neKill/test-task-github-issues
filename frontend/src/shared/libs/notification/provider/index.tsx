@@ -1,5 +1,5 @@
-import { NotificationInstance } from 'antd/es/notification/interface';
-import { createContext, ReactElement } from 'react';
+import { createContext, type  ReactElement } from 'react';
+import type { NotificationInstance } from 'antd/es/notification/interface';
 import { notification } from 'antd';
 
 type NotificationContextType = {

@@ -1,7 +1,6 @@
 import type { Express, Router } from 'express';
 import type { Request, Response } from 'express';
 
-
 export abstract class ModuleClass {
    abstract run(): RouterType;
 }

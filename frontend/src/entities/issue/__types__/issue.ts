@@ -1,4 +1,4 @@
-import { State } from '@/shared/ui';
+import type { State } from '@/shared/ui';
 
 export type User = {
    readonly id: string,

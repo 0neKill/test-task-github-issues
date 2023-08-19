@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { Button as ButtonWrapper } from 'antd';
 
 import './styles.scss';

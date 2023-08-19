@@ -1,10 +1,9 @@
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Drawer } from 'antd';
 
 import { Routes } from '@/shared/utils/constants';
 import { IssuesList } from '@/widgets';
-
 
 export default function Default() {
    const [hasActivePage, setHasActivePage] = useState<boolean>(false);
@@ -19,7 +18,7 @@ export default function Default() {
 
    return (
       <section className='default'>
-         <IssuesList className='main__issues-list'/>
+         <IssuesList className='main__issues-list' />
          <Drawer
             rootClassName='default__drawer'
             open={hasActivePage}

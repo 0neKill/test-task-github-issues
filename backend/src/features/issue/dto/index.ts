@@ -1,7 +1,7 @@
-import { RequestType, ResponseType } from '../../../__types__';
 import type { NextFunction, Request } from 'express';
 import { object, string, number } from 'yup';
 
+import type { ResponseType } from '../../../__types__';
 
 class CommonValidate {
    public static checkValidateDto = (fieldRequest: 'query' | 'params', fieldForSchema: 'number' | 'page') =>

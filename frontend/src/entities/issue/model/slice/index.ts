@@ -1,8 +1,9 @@
 import { createSlice, Draft, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit';
-import { AsyncIssueFetchProps, Comment, Issue } from '@/entities/issue';
-import { NullOrType } from '@/shared/__types__';
-import { asyncIssieViewFetch, asyncIssueFetch } from '@/entities/issue/model/thunk/main.ts';
 
+import { AsyncIssueFetchProps, Comment, Issue } from '@/entities/issue';
+import { asyncIssieViewFetch, asyncIssueFetch } from '@/entities/issue/model/thunk/main';
+
+import type { NullOrType } from '@/shared/__types__';
 
 export type InitialState = {
    loading: boolean,
@@ -63,11 +64,13 @@ const issueReducer = createSlice<InitialState, IssueSliceReducer<InitialState>, 
    extraReducers: builder => (
       builder
          .addCase(asyncIssueFetch.fulfilled, (state, { payload }: PayloadAction<{
+            page: number,
             total_count: number
             issues: Issue[]
          }>) => {
             state.issues = payload.issues;
             state.totalCount = payload.total_count;
+            state.search.page = payload.page;
             state.loading = false;
          })
          .addCase(asyncIssueFetch.pending, (state) => {

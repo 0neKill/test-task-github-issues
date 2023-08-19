@@ -1,7 +1,9 @@
 import express from 'express';
-import type { ExpressType, ModuleType } from '../../__types__';
 import mongoose from 'mongoose';
 import cors from 'cors';
+
+import type { ExpressType, ModuleType } from '../../__types__';
+
 
 export class ApplicationBuilder {
    private readonly _port: number;
@@ -28,7 +30,7 @@ export class ApplicationBuilder {
    }
 
    registerApiRoutes(defaultPrefix: string = 'api') {
-      this._application.use(cors())
+      this._application.use(cors());
       const vectorInstances = this._routes.map(Module => new (Module as any)().run());
       this._application.use(`/${defaultPrefix}`, vectorInstances);
       return this;

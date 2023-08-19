@@ -1,8 +1,9 @@
+import { Button, Result } from 'antd';
+import { useNavigate } from 'react-router-dom';
+
 import { Container } from '@/shared/ui';
 
 import './styles.scss';
-import { Button, Result } from 'antd';
-import { useNavigate } from 'react-router-dom';
 
 export default function Error() {
    const navigate = useNavigate();

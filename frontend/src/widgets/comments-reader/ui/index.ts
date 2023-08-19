@@ -1,1 +1,1 @@
-export * from './comments-reader.tsx';
+export * from './comments-reader';

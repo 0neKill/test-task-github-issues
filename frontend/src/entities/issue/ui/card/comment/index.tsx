@@ -1,7 +1,8 @@
 import { Avatar, Card } from 'antd';
 import ReactMarkdown from 'react-markdown';
-import { FC } from 'react';
-import { Comment } from '@/entities/issue';
+import type { FC } from 'react';
+
+import type { Comment } from '@/entities/issue';
 
 import '../styles.scss';
 

@@ -1,5 +1,4 @@
-import { RequestType, ResponseType } from '../../../__types__';
-
+import type { RequestType, ResponseType } from '../../../__types__';
 import type { LoggerService } from '../services';
 
 export class LoggerController {

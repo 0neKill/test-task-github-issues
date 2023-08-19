@@ -1,8 +1,7 @@
 import { List as ListWrapper } from 'antd';
-import { ReactElement } from 'react';
-import { PaginationConfig } from 'antd/es/pagination/Pagination';
+import type { ReactElement } from 'react';
+import type { PaginationConfig } from 'antd/es/pagination/Pagination';
 
-import './list.scss.sass';
 
 type IssueListProps<T> = {
    paginationConfig: () => PaginationConfig,

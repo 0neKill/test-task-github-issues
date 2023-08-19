@@ -1,7 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { $api } from '@/shared/api/configuration.ts';
-import { Log } from '@/entities/log';
+
+import { $api } from '@/shared/api';
 import { actionLog } from '@/entities/log/model';
+
+import type { Log } from '@/entities/log';
 
 export const asyncLogFetch = createAsyncThunk('logs/asyncLogFetch',
    async (_: unknown, thunkAPI): Promise<{

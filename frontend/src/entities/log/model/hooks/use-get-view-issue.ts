@@ -1,12 +1,13 @@
-import { useDispatchActionIssue } from '@/entities/log';
+import { MutableRefObject, useEffect, useMemo, useRef } from 'react';
 import { useSelector } from 'react-redux';
+
+import { useDispatchActionIssue } from '@/entities/log';
+import { useNotification } from '@/shared/libs';
 import {
    getSelectError, getSelectLoading, getSelectLogs,
 } from '@/entities/log/model/selectors';
-import { MutableRefObject, useEffect, useMemo, useRef } from 'react';
-import { useNotification } from '@/shared/libs';
 
-export const   useGetViewIssue = () => {
+export const useGetViewIssue = () => {
    const { setError, asyncLogFetch } = useDispatchActionIssue();
    const { api } = useNotification();
    const logs = useSelector(getSelectLogs);

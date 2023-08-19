@@ -1,11 +1,12 @@
-import type { RouterType, RoutesTypes } from '../../../__types__';
+import { Application } from 'express';
+
 
 import { Routes } from './enty-point';
 import { IssueControllers } from '../controllers';
-import { Application } from 'express';
 import { IssueReqDTO, IssuesManyReqDTO } from '../dto';
 import { loggingOfActions } from '../../../middlewares/logging';
 
+import type { RouterType, RoutesTypes } from '../../../__types__';
 
 export class IssueRoutes implements RoutesTypes {
    private readonly _application: RouterType;

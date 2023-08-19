@@ -24,7 +24,7 @@ export const useGetIssue = () => {
 
 
    return useMemo(() => (
-      { issues, loading, performance, error, totalCount }
-   ), [issues, loading, performance, error, totalCount]);
+      { issues, loading, performance, error, totalCount, page: search.page }
+   ), [issues, loading, performance, error, totalCount, search.page]);
 
 };

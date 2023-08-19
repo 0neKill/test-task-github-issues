@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose';
+
 import type { LogReqDTO } from '../dto';
 
 
@@ -12,13 +13,12 @@ const LogSchema = new Schema<LogReqDTO>({
       required: true,
    },
 
-}, { timestamps: true })
+}, { timestamps: true });
 
-LogSchema.set("toJSON", {
+LogSchema.set('toJSON', {
    virtuals: true,
-   versionKey:false,
+   versionKey: false,
 });
-
 
 
 export const LogEntity = model<LogReqDTO>('Log', LogSchema);

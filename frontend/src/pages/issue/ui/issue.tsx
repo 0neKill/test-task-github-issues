@@ -1,8 +1,8 @@
-import './styles.scss';
+import { Spin } from 'antd';
 import { IssueReader, CommentsReader } from '@/widgets';
 import { useGetViewIssue } from '@/entities/issue';
-import { Spin } from 'antd';
 
+import './styles.scss';
 
 export default function Issue() {
    const {

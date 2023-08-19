@@ -1,11 +1,11 @@
+import { type FC, useEffect } from 'react';
+
 import { TextButton, useDispatchActionIssue, useGetIssue } from '@/entities/issue';
-import { FC, useEffect } from 'react';
 import { useNotification } from '@/shared/libs';
 
 type SearchIssuesProps = FC<{
    hasValue: boolean,
 }>
-
 
 export const SearchIssues: SearchIssuesProps = ({ hasValue }) => {
    const { performance, loading, error } = useGetIssue();
