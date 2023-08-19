@@ -19,7 +19,7 @@ export class LoggerService {
          const log = await this._loggerRepositories.create({ ip, type });
          return ResponseFactory.create<LogResponseTypes>(200, 'Execute response', log);
       } catch (e: any) {
-         return ResponseFactory.create(e.response?.status, e.response?.data?.errors ?? 'No connection with github');
+         return ResponseFactory.create(e.response?.status  ?? 505, e.response?.data?.errors ?? 'No connection with github');
       }
    };
 
@@ -28,7 +28,7 @@ export class LoggerService {
          const logs = await this._loggerRepositories.findAll();
          return ResponseFactory.create<LogResponseTypes[]>(200, 'Execute response', logs);
       } catch (e: any) {
-         return ResponseFactory.create(e.response?.status, e.response?.data?.errors ?? 'No connection with github');
+         return ResponseFactory.create(e.response?.status ?? 505, e.response?.data?.errors ?? 'No connection with github');
       }
    };
 

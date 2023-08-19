@@ -20,11 +20,11 @@ export class IssueService {
          const transformIssues = Issue.transformIssues(items);
 
          return ResponseFactory.create<ResponseTypesManyIssues>(200, 'Execute Correct', {
-            total_count: total_count,
+            total_count: total_count > 1000 ? 1000 : total_count,
             issues: transformIssues,
          });
       } catch (e: any) {
-         return ResponseFactory.create(e.response?.status, e.response?.data?.errors ?? 'No connection with github');
+         return ResponseFactory.create(e.response?.status ?? 505, e.response?.data?.errors ?? 'No connection with github');
       }
    };
 

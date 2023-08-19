@@ -12,7 +12,7 @@ export class IssueRepositories {
    }
 
    getIssues: GetIssuesTypesRepository = async ({ page = 1, userName, repoName }) => {
-      const { data } = await axios.get(`${this._api}/search/issues?q=repo:${userName}/${repoName}+is:issue&page=${page}`,
+      const { data } = await axios.get(`${this._api}/search/issues?q=repo:${userName}/${repoName}+is:issue&page=${page}&per_page=30`,
          this._getConfiguration());
       return data;
    };

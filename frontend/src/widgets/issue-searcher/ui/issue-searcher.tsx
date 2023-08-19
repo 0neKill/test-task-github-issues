@@ -11,7 +11,7 @@ export const IssueSearcher: IssueSearcherTypes = ({ className }) => {
    return (
       <div className={clsx('issue-searcher', className)}>
          <EntryIssues
-            renderItem={({ value }) => <SearchIssues value={value} />} />
+            renderItem={({ hasValue }) => <SearchIssues hasValue={hasValue} />} />
       </div>
    );
 };
