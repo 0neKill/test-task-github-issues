@@ -1,12 +1,13 @@
-.issue-card {
-  $issueCard: &;
+.card {
+  $card: &;
 
   &__title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 10px;
 
-    #{$issueCard}__profile {
+    #{$card}__profile {
       display: flex;
       align-items: center;
       margin-top: 10px;
@@ -17,8 +18,19 @@
       color: var(--gray-light);
     }
 
-    #{$issueCard}__subtitle {
+    #{$card}__subtitle {
       color: var(--gray-regular);
     }
+  }
+}
+
+.markdown {
+  overflow: hidden;
+
+  * {
+    padding-right: 10px;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

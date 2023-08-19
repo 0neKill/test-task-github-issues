@@ -3,7 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import { FC } from 'react';
 import { Issue } from '@/entities/issue';
 
-import './styles.scss';
+import '../styles.scss';
+import { Status } from '@/shared/ui';
 
 type IssueCardProps = FC<{
    issue: Issue
@@ -12,17 +13,18 @@ type IssueCardProps = FC<{
 export const IssueCard: IssueCardProps = ({ issue }) => {
    return (
       <Card
-         className='issue-card'
+         className='card issue-card'
          title={
-            <div className='issue-card__title'>
-               <div className='issue-card__profile'>
+            <div className='card__title'>
+               <div className='card__profile'>
+                  <Status status={issue.state} className='card__status' />
                   <Avatar src={issue.user.avatarUrl} />
                   <span>{issue.user.login}</span>
                </div>
-               <span className='issue-card__subtitle'>{issue.title}</span>
+               <span className='card__subtitle'>{issue.title}</span>
             </div>
          }>
-         <ReactMarkdown>
+         <ReactMarkdown className='markdown'>
             {issue.body}
          </ReactMarkdown>
       </Card>

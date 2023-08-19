@@ -1,0 +1,10 @@
+.issue-reader {
+  &__list {
+    .ant-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+  }
+}

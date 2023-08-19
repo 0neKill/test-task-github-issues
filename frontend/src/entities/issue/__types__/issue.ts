@@ -6,6 +6,14 @@ export type User = {
    readonly avatarUrl: string,
 }
 
+export type Comment = {
+   id: string,
+   body: string,
+   createdAt: string,
+   updatedAt: string,
+   author: User,
+}
+
 export type Issue = {
    id: string,
    number: number,
