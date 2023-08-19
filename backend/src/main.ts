@@ -5,7 +5,7 @@ import 'dotenv/config';
 
 (async () => {
    await ApplicationBuilder.registerDataBase();
-   new ApplicationBuilder(ModuleRoot, Number(process.env.PORT))
+   new ApplicationBuilder(ModuleRoot, Number(process.env.SERVER_PORT))
       .registerApiRoutes()
       .listen();
 })();

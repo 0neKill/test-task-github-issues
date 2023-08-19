@@ -9,7 +9,6 @@ export const asyncLogFetch = createAsyncThunk('logs/asyncLogFetch',
    }> => {
       try {
          const { data } = await $api.get('/logs');
-         console.log(data,'asda');
          return {
             logs: data.data ?? [],
          };

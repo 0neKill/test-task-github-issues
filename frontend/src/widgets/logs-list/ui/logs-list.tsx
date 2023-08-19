@@ -23,9 +23,6 @@ export const LogsList: LogsListProps = ({ className }) => {
             data={logs}
             renderItem={(log) => <LogItem log={log} />}
             paginationConfig={() => ({
-               onChange: () => {
-
-               },
                pageSize: 10,
                className: 'issues-list__pagination',
             })}

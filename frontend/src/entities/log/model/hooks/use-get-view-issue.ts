@@ -6,7 +6,7 @@ import {
 import { MutableRefObject, useEffect, useMemo, useRef } from 'react';
 import { useNotification } from '@/shared/libs';
 
-export const useGetViewIssue = () => {
+export const   useGetViewIssue = () => {
    const { setError, asyncLogFetch } = useDispatchActionIssue();
    const { api } = useNotification();
    const logs = useSelector(getSelectLogs);
