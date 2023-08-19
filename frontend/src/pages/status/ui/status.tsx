@@ -1,9 +1,11 @@
 import './styles.scss';
-import { DatePicker } from 'antd';
+import { LogsList } from '@/widgets/logs-list';
 
 export default function Status() {
    return (
-      <div><DatePicker/></div>
+      <section className='status-page'>
+         <LogsList />
+      </section>
    );
 }
 

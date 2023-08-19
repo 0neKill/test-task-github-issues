@@ -1,0 +1,15 @@
+.type-action {
+  &.get_issues {
+    color: var(--green-dark);
+  }
+
+  &.get_issue {
+    color: var(--purple-dark);
+  }
+
+  &.search_issues {
+    color: var(--blue-dark-hover);
+  }
+}
+
+

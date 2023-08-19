@@ -1,0 +1,8 @@
+.log-item {
+  display: flex !important;
+  border-block-end: 1px solid rgba(5, 5, 5, 2.06) !important;
+  margin-bottom: 10px !important;
+  span {
+    color: var(--gray-extra-light);
+  }
+}
