@@ -6,12 +6,14 @@ import { TextButton } from '@/entities/issue';
 
 
 type OpenIssueProps = FC<{
-   id: number
+   id: number,
+   userName:string,
+   repoName:string
 }>
-export const OpenIssue: OpenIssueProps = ({ id }) => {
+export const OpenIssue: OpenIssueProps = ({ id,repoName,userName }) => {
 
    const navigate = useNavigate();
-   const handlerOnOpen = () => navigate(`${Routes.ISSUE_WITHOUT}/${id}`);
+   const handlerOnOpen = () => navigate(`${Routes.ISSUE_WITHOUT}/${userName}/${repoName}/${id}`);
 
    return <TextButton title='View' onClick={handlerOnOpen} />;
 };

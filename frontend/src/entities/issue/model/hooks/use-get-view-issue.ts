@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { AsyncIssieViewFetchProps, useDispatchActionIssue } from '@/entities/issue';
 import { useNotification } from '@/shared/libs';
 import {
-   getCommentView, getIssueView, getSearchData, getSelectActiveError, getSelectActiveLoading,
+   getCommentView, getIssueView, getSelectActiveError, getSelectActiveLoading,
 } from '@/entities/issue/model/selectors';
 
 export const useGetViewIssue = () => {
@@ -15,8 +15,7 @@ export const useGetViewIssue = () => {
    const loading = useSelector(getSelectActiveLoading);
    const error = useSelector(getSelectActiveError);
    const comments = useSelector(getCommentView);
-   const { userName, repoName } = useSelector(getSearchData);
-   const { id } = useParams();
+   const { id,userName,repoName } = useParams();
    const { api } = useNotification();
    const hasFirstFetch = useRef(true) as MutableRefObject<boolean>;
 
@@ -24,9 +23,8 @@ export const useGetViewIssue = () => {
       return asyncIssieViewFetch({ number, userName, repoName });
    }, [asyncIssieViewFetch]);
 
-
    useEffect(() => {
-      if (id && hasFirstFetch.current) {
+      if (id && userName && repoName &&hasFirstFetch.current) {
          id && performance({ number: +id, userName, repoName });
       }
       hasFirstFetch.current = false;

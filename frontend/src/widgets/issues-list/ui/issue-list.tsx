@@ -14,7 +14,7 @@ type IssuesListTypes = FC<{
 }>
 
 export const IssuesList: IssuesListTypes = ({ className }) => {
-   const { issues, performance, loading, totalCount, page } = useGetIssue();
+   const { issues, performance, loading, totalCount, search } = useGetIssue();
 
    return (
       <div className={clsx('issues-list', className)}>
@@ -23,13 +23,13 @@ export const IssuesList: IssuesListTypes = ({ className }) => {
             data={issues}
             renderItem={(issues) => <IssueItem
                issue={issues}
-               action={[<OpenIssue id={issues.number} />]} />}
+               action={[<OpenIssue id={issues.number} userName={search.userName} repoName={search.repoName} />]} />}
             paginationConfig={() => ({
                onChange: (page) => {
                   performance(page);
                },
                pageSize: 30,
-               current: page,
+               current: search.page,
                totalBoundaryShowSizeChanger: totalCount,
                total: totalCount,
                className: 'issues-list__pagination',
